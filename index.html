@@ -1,18 +1,17 @@
 <!-- Unit 7 Project
 Requirements
-[  ] three variables
-[  ] animation that moves position
-[  ] animation that changes size
-[  ] three new HTML elements/CSS Declarations
+[ yes ] three variables
+[ yes ] animation that moves position
+[ yes ] animation that changes size
+[ yes ] three new HTML elements/CSS Declarations
 
 Select ONE Additional 
 [ no ] Feature 1 - Use an Incrementing Shortcut 
 [ no ] Feature 2 - Move Object with Mouse
-[ no ] Feature 3 - Repeat Animation
+[ yes ] Feature 3 - Repeat Animation
 [ no ] Feature 4 - Text on the Canvas
 [ no ] Feature 5 - Animate a color change
 -->
-
 
 <!DOCTYPE html>
 <html>
@@ -22,25 +21,45 @@ Select ONE Additional
     <title>Unit 7 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
-    <style></style>
+    <style>
+      @font-face {
+        font-family: newspaper;
+        src: url(https://cdn.glitch.global/d08a35c7-e09f-4c77-9840-1a2991aef347/OldNewspaperTypes.ttf?v=1736527031022);
+      }
+      @font-face {
+        font-family: typer;
+        src: url(https://cdn.glitch.global/d08a35c7-e09f-4c77-9840-1a2991aef347/1942.ttf?v=1736527339591);
+      }
+      .header {
+        font-size: 60px;
+        font-family: newspaper;
+      }
+      .secondheader {
+        font-size: 30px;
+        font-family: newspaper;
+      }
+      li {
+        font-size: 20px;
+        font-family: typer;
+      }
+    </style>
   </head>
 
-  <body>
-    <h1>
-      New Year, New Me
-    </h1>
+  <body style="background-color: rgb(77, 44, 82)">
+    <h1 class="header">New Year, New Me</h1>
     <div class="main">
       <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
       <div>
-        <h2>
-          2025 Goals
-        </h2>
-        <ol>
-          <li>Spend More Time Coding </li>
+        <h2 class="secondheader">2025 Goals</h2>
+        <ol class="typer">
+          <li>Spend More Time Coding</li>
+          <li>Write more poetry!</li>
+          <li>Remain kind and remain understanding</li>
+          <li>Protect my peace</li>
+          <li>Pick my priorities</li>
         </ol>
       </div>
     </div>
-        
   </body>
 </html>
 
